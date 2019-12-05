@@ -7,9 +7,8 @@ from bill_calculation import Calculation
 def main():
     seconds = float(0)
     minutes = int(0)
-
-    test = Calculation()
-    total_watt = test.inili_home(800, 5000)
+    home = Calculation()
+    total_watt = home.init_random_home()
 
     run = input("press r to start : ")
 
@@ -22,14 +21,13 @@ def main():
             minutes = minutes + 1
         os.system('clear')
         seconds = seconds + 30
-        print("Time : ", minutes, ":", seconds)
-        print()
-        units = test.wattage_consumption(total_watt, minutes)
-        print("consumption : ", units , "KWH")
-        print("")
+        units = home.wattage_consumption(total_watt, minutes)
         bill = bill_calculation.bill_calc(units)
-        print("BILL = ", round(bill, 3), " EGP .")
-        print("")
+
+        print("total wattage : ", total_watt, "\n")
+        print("Time : ", minutes, ":", seconds, "\n")
+        print("consumption : ", units , "KWH", "\n")
+        print("BILL = ", round(bill, 3), " EGP . \n")
         time.sleep(10)
 
 
