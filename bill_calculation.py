@@ -41,7 +41,7 @@ class Calculation(Appliance):
         self.turned_off_appliance = []
         self.total_wattage = 0
 
-    def wattage_consumption(self, wattage, time_in_mints):
+    def wattage_consumption(self, wattage, time_in_min):
         """
         take time in mints, wattage in watt and convert time  to hours, watt to kilowatt
         to return unit.
@@ -50,7 +50,7 @@ class Calculation(Appliance):
         :param time_in_mints: time in mints
         :return: unit => KWH
         """
-        time_in_hours = time_in_mints / 60
+        time_in_hours = time_in_min / 60
         unit = (wattage * time_in_hours) / self.kilo_watt
         return unit
 
@@ -84,7 +84,7 @@ class Calculation(Appliance):
                 self.home.append(Appliance("unknown", randint(minimum_wattage, maximum_wattage)))
                 print("appliance_mun is not none")
 
-        elif minimum_wattage and maximum_wattage is not None and appliance_mun is None :
+        elif minimum_wattage and maximum_wattage is not None and appliance_mun is None:
             for appliance_object in home_list:
                 appliance_object = Appliance(appliance_object, randint(minimum_wattage, maximum_wattage))
                 self.home.append(appliance_object)
@@ -92,7 +92,7 @@ class Calculation(Appliance):
         else:
             for device, wattage in home_dic.items():
                 self.home.append(Appliance(device, wattage))
-            print("all = none")
+            # print("all = none")
 
         for obj in self.home:
             self.total_wattage += obj.wattage
