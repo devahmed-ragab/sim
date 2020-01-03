@@ -40,17 +40,21 @@ class Calculation(Appliance):
         # home is a list of appliance object
         self.turned_off_appliance = []
         self.total_wattage = 0
+        self.units = 0.0
+        self.bill = 0.0
+        self.run = True
 
-    def wattage_consumption(self, wattage, time_in_min):
+    def wattage_consumption(self, wattage, time_in_sec):
         """
         take time in mints, wattage in watt and convert time  to hours, watt to kilowatt
         to return unit.
         unit => total Wattage * Time / 10000
+        :param time_in_min:
         :param wattage: running Total wattage
-        :param time_in_mints: time in mints
         :return: unit => KWH
         """
-        time_in_hours = time_in_min / 60
+
+        time_in_hours = (time_in_sec / 60)
         unit = (wattage * time_in_hours) / self.kilo_watt
         return unit
 
@@ -73,15 +77,15 @@ class Calculation(Appliance):
             "Toaster": 1400,
             "Dishwasher": 2400,
             "Washer": 500,
-            "Dryer": 40000,
+            "Dryer": 4000,
             "Iron": 1800,
             "SpaceHeater": 5500,
             "HairDryer": 1875,
         }
         # making full random appliance
         if appliance_mun is not None:
-            for n in range(1, appliance_mun):
-                self.home.append(Appliance("unknown", randint(minimum_wattage, maximum_wattage)))
+            for n in range(5, appliance_mun):
+                self.home.append(Appliance("unknown", randint(200, 4000)))
                 print("appliance_mun is not none")
 
         elif minimum_wattage and maximum_wattage is not None and appliance_mun is None:
@@ -115,13 +119,13 @@ class Calculation(Appliance):
     def turn_off(self, name):
         # TODO: ADD search algorithm and check if name is unknown
         for obj in self.home:
-            if obj.name == name:
+            if obj.get_name == name:
                 self.turned_off_appliance.append(obj)
                 self.home.remove(obj)
 
     def turn_on(self, name):
         for obj in self.turned_off_appliance:
-            if obj.name == name:
+            if obj.get_name == name:
                 self.home.append(obj)
                 self.turned_off_appliance.remove(obj)
 
@@ -130,3 +134,32 @@ class Calculation(Appliance):
 
     def decrease_wattage(self, wattage):
         self.total_wattage -= wattage
+
+    def set_total_wattage(self, total_wattage):
+        self.total_wattage = total_wattage
+
+    def setUnits(self, u):
+        self.units = u
+
+    def getUnits(self):
+        return round(self.units, 2)
+
+    def getBill(self):
+        return round(self.bill, 3)
+
+    def setTotalWatt(self, total):
+        self.total_wattage = total
+
+    def show_running_devices(self):
+        strr= ""
+        for device in self.home :
+            strr += " {} : {} \n".format(device.name,device.wattage)
+
+        return strr
+
+    def show_of_devices(self):
+        strr= ""
+        for device in self.turned_off_appliance :
+            strr += " {} : {} \n".format(device.name,device.wattage)
+
+        return strr
