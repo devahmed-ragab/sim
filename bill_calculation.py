@@ -53,7 +53,6 @@ class Calculation(Appliance):
         :param wattage: running Total wattage
         :return: unit => KWH
         """
-
         time_in_hours = (time_in_sec / 60)/60
         unit = (wattage * time_in_hours) / self.kilo_watt
         return unit
@@ -67,20 +66,14 @@ class Calculation(Appliance):
         :param maximum_wattage:
         :return: total_wattage : int,  of home devices that's running together
         """
-
         home_list = ["CoffeeMaker", "Microwave", "Toaster", "Dishwasher", "Washer"
                                                                           "Dryer", "Iron", "SpaceHeater", "HairDryer"]
-
         home_dic = {
             "CoffeeMaker": 1200,
             "Microwave": 1100,
             "Toaster": 1400,
             "Dishwasher": 2400,
             "Washer": 500,
-            "Dryer": 4000,
-            "Iron": 1800,
-            "SpaceHeater": 5500,
-            "HairDryer": 1875,
         }
         # making full random appliance
         if appliance_mun is not None:

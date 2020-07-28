@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement>#/Users/apple/PycharmProjects/sim/bill_calculation.py</OriginalElement>
+  <nodes>
+    <node x="0.0" y="850.0">bill_calculation.Calculation</node>
+    <node x="176.5" y="0.0">object</node>
+    <node x="205.5" y="586.0">Appliance.Appliance</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Appliance.Appliance" target="object">
+      <point x="0.0" y="-107.0" />
+      <point x="0.0" y="268.0" />
+    </edge>
+    <edge source="bill_calculation.Calculation" target="Appliance.Appliance">
+      <point x="0.0" y="-279.5" />
+      <point x="0.0" y="107.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.658871786622699" x="313.5" y="951.0" />
+  <SelectedNodes>
+    <node>bill_calculation.Calculation</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+</Diagram>
+

@@ -2,7 +2,7 @@ import os
 import time
 from bill_calculation import Calculation
 from bill_calculation import bill_calc
-from ap import update_Data
+from api import update_ser_local, update_SER_consumption
 
 seconds = float(0)
 minutes = int(0)
@@ -27,10 +27,7 @@ def meter():
     if seconds % 2 == 0:
         home.units = home.wattage_consumption(home.total_wattage, total_sec)
         home.bill = bill_calc(home.units)
-        print("total wattage : ", home.total_wattage, "\n")
-        print("consumption : ", home.getUnits(), "KWH", "\n")
-        print("BILL = ", home.getBill(), " EGP . \n")
-        update_Data(home.getUnits(), home.getBill(), home.getUnits())
+        update_SER_consumption(home.getUnits(), home.getBill(), home.getUnits())
 
 
 def main():

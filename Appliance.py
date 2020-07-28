@@ -6,7 +6,6 @@ class Appliance:
         self.name = name
         self._wattage = wattage
 
-
     @property
     def wattage(self):
         return self._wattage

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>Python</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="51.0" y="586.0">sim_GUI.GUI</node>
+    <node x="0.0" y="0.0">object</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sim_GUI.GUI" target="object">
+      <point x="0.0" y="-291.0" />
+      <point x="0.0" y="268.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6647759082841435" x="430.5866448156429" y="683.4932071671893" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+</Diagram>
+
