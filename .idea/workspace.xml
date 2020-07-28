@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52325363-f9f1-4875-9de0-8f837c122cb0" name="Default" comment="v1">
-      <change afterPath="$PROJECT_DIR$/uml/pyGUI.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/sim_uml.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uml/sim_uml.uml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Appliance.py" beforeDir="false" afterPath="$PROJECT_DIR$/Appliance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ap.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bill_calculation.py" beforeDir="false" afterPath="$PROJECT_DIR$/bill_calculation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui_O0P.py" beforeDir="false" afterPath="$PROJECT_DIR$/sim_GUI.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +47,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/uml" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/uml" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -305,6 +299,7 @@
       <workItem from="1595757291083" duration="343000" />
       <workItem from="1595867076950" duration="143000" />
       <workItem from="1595902982561" duration="1019000" />
+      <workItem from="1595914058407" duration="1538000" />
     </task>
     <servers />
   </component>
